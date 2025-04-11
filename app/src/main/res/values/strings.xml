@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Memoria</string>
+    <string name="button_description_settings">settings_button</string>
+    <string name="button_description_home">home_button</string>
+    <string name="button_description_profile">profile_button</string>
+</resources>

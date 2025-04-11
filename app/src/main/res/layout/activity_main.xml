@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_main"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/navBar_main"
+        android:layout_width="409dp"
+        android:layout_height="77dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/home_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/active_button_navbar"
+            android:contentDescription="@string/button_description_home"
+            app:srcCompat="@drawable/home_ico" />
+
+        <ImageButton
+            android:id="@+id/profile_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/button_description_profile"
+            android:onClick="goToProfileActivity"
+            app:srcCompat="@drawable/profile_ico" />
+
+        <ImageButton
+            android:id="@+id/settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/button_description_settings"
+            android:onClick="goToSettingsActivity"
+            app:srcCompat="@drawable/settings_ico" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
