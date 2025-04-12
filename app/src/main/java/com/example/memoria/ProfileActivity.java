@@ -27,12 +27,12 @@ public class ProfileActivity extends AppCompatActivity {
     public void goToMainActivity(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.slide_in_center_from_left, R.anim.slide_in_right_from_center);
+        overridePendingTransition(0, 0);
     }
 
     public void goToSettingsActivity(View view) {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.slide_in_center_from_right, R.anim.slide_in_left_from_center);
+        overridePendingTransition(0, 0);
     }
 }
