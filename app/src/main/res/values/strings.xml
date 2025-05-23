@@ -3,4 +3,5 @@
     <string name="button_description_settings">settings_button</string>
     <string name="button_description_home">home_button</string>
     <string name="button_description_profile">profile_button</string>
+    <string name="title_activity_memory_game">MemoryGameActivity</string>
 </resources>

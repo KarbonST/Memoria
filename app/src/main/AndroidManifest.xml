@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +15,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Memoria"
         tools:targetApi="31">
+
+        <!-- Ваш ReminderReceiver -->
+        <receiver
+            android:name=".ReminderReceiver"
+            android:exported="true" />
+
+        <activity
+            android:name=".MemoryGameActivity"
+            android:exported="false"
+            android:label="@string/title_activity_memory_game"
+            android:theme="@style/Theme.Memoria" />
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />

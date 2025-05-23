@@ -35,4 +35,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_center_from_right, R.anim.slide_in_right_from_center);
     }
+
+    public void goToGameActivity(View view){
+        Intent intent = new Intent(this, MemoryGameActivity.class);
+        startActivity(intent);
+    }
 }

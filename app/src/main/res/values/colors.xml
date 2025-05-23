@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="active_button_navbar">#95E27D60</color>
     <color name = "background_main">#41B3A3</color>
+    <color name="card_back_fill">#FFFBEB</color>
+    <color name="card_back_stroke">#FFD54F</color>
 </resources>

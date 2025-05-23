@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,14 +9,69 @@
     android:background="@color/background_main"
     tools:context=".ProfileActivity">
 
+    <!-- Форма логина/пароля -->
+    <LinearLayout
+        android:id="@+id/loginForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/navBar">
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Логин"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Пароль"
+            android:inputType="textPassword"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Войти"/>
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Регистрация"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Нижний бар навигации -->
     <LinearLayout
         android:id="@+id/navBar"
         android:layout_width="409dp"
         android:layout_height="77dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <ImageButton
             android:id="@+id/home_button"
@@ -25,7 +81,7 @@
             android:background="@android:color/transparent"
             android:contentDescription="@string/button_description_home"
             android:onClick="goToMainActivity"
-            app:srcCompat="@drawable/home_ico" />
+            app:srcCompat="@drawable/home_ico"/>
 
         <ImageButton
             android:id="@+id/profile_button"
@@ -34,7 +90,7 @@
             android:layout_weight="1"
             android:background="@color/active_button_navbar"
             android:contentDescription="@string/button_description_profile"
-            app:srcCompat="@drawable/profile_ico" />
+            app:srcCompat="@drawable/profile_ico"/>
 
         <ImageButton
             android:id="@+id/settings_button"
@@ -44,8 +100,7 @@
             android:background="@android:color/transparent"
             android:contentDescription="@string/button_description_settings"
             android:onClick="goToSettingsActivity"
-            app:srcCompat="@drawable/settings_ico" />
-
+            app:srcCompat="@drawable/settings_ico"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
