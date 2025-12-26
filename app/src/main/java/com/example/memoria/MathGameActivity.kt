@@ -8,14 +8,13 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.example.memoria.ui.screens.MemoryGameScreen
+import com.example.memoria.ui.screens.MathGameScreen
 import com.example.memoria.ui.theme.MemoriaTheme
 
 /**
- * Memory game activity - card matching game.
- * Converted from Java to Kotlin with Jetpack Compose.
+ * Math game activity - arithmetic quiz game.
  */
-class MemoryGameActivity : ComponentActivity() {
+class MathGameActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         
@@ -25,7 +24,7 @@ class MemoryGameActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    MemoryGameScreen(
+                    MathGameScreen(
                         onHomeClick = {
                             val intent = Intent(this, MainActivity::class.java)
                             startActivity(intent)
@@ -59,5 +58,4 @@ class MemoryGameActivity : ComponentActivity() {
         }
     }
 }
-
 

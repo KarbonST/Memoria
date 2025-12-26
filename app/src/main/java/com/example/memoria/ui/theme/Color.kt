@@ -75,3 +75,4 @@ val CardBackStroke = Color(0xFFFFD54F) // Soft yellow
 val CardBackFillDark = Color(0xFF2A2415) // Dark cream
 val CardBackStrokeDark = Color(0xFF6B5D2F) // Muted yellow
 
+

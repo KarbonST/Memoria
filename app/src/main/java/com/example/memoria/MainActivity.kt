@@ -28,8 +28,12 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     HomeScreen(
-                        onPlayClick = {
+                        onMemoryGameClick = {
                             val intent = Intent(this, MemoryGameActivity::class.java)
+                            startActivity(intent)
+                        },
+                        onMathGameClick = {
+                            val intent = Intent(this, MathGameActivity::class.java)
                             startActivity(intent)
                         },
                         onProfileClick = {

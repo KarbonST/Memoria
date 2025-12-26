@@ -27,6 +27,10 @@
             android:label="@string/title_activity_memory_game"
             android:theme="@style/Theme.Memoria" />
         <activity
+            android:name=".MathGameActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Memoria" />
+        <activity
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity

@@ -12,6 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import androidx.compose.material3.ExperimentalMaterial3Api
 import com.example.memoria.R
 import com.example.memoria.ui.components.MemoriaBottomNavBar
 import com.example.memoria.ui.components.MemoryCard
@@ -22,6 +23,7 @@ import java.util.*
  * Memory game screen with card matching logic.
  * Replaces MemoryGameActivity XML layout with Compose.
  */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MemoryGameScreen(
     onHomeClick: () -> Unit,
@@ -97,6 +99,25 @@ fun MemoryGameScreen(
     
     Scaffold(
         modifier = modifier.fillMaxSize(),
+        topBar = {
+            TopAppBar(
+                title = { },
+                navigationIcon = {
+                    TextButton(
+                        onClick = onHomeClick,
+                        modifier = Modifier.padding(horizontal = Spacing.xs)
+                    ) {
+                        Text(
+                            text = "Выход",
+                            style = MaterialTheme.typography.bodyLarge
+                        )
+                    }
+                },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.surface
+                )
+            )
+        },
         bottomBar = {
             MemoriaBottomNavBar(
                 currentRoute = "game",

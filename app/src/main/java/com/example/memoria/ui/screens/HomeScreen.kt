@@ -16,7 +16,8 @@ import com.example.memoria.ui.theme.Spacing
  */
 @Composable
 fun HomeScreen(
-    onPlayClick: () -> Unit,
+    onMemoryGameClick: () -> Unit,
+    onMathGameClick: () -> Unit,
     onProfileClick: () -> Unit,
     onSettingsClick: () -> Unit,
     modifier: Modifier = Modifier
@@ -60,7 +61,7 @@ fun HomeScreen(
                 Spacer(modifier = Modifier.height(Spacing.xxl))
                 
                 FilledTonalButton(
-                    onClick = onPlayClick,
+                    onClick = onMemoryGameClick,
                     modifier = Modifier
                         .fillMaxWidth(0.7f)
                         .height(Spacing.xxxl),
@@ -70,7 +71,23 @@ fun HomeScreen(
                     )
                 ) {
                     Text(
-                        text = "Играть",
+                        text = "Память",
+                        style = MaterialTheme.typography.titleLarge
+                    )
+                }
+                
+                FilledTonalButton(
+                    onClick = onMathGameClick,
+                    modifier = Modifier
+                        .fillMaxWidth(0.7f)
+                        .height(Spacing.xxxl),
+                    colors = ButtonDefaults.filledTonalButtonColors(
+                        containerColor = MaterialTheme.colorScheme.secondaryContainer,
+                        contentColor = MaterialTheme.colorScheme.onSecondaryContainer
+                    )
+                ) {
+                    Text(
+                        text = "Арифметика",
                         style = MaterialTheme.typography.titleLarge
                     )
                 }
@@ -78,4 +95,5 @@ fun HomeScreen(
         }
     }
 }
+
 
